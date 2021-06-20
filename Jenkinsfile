@@ -37,20 +37,20 @@ pipeline {
         sh "mvn versions:set -DnewVersion=${CODING_MAVEN_VERSION}"
       }
     }
-    stage('发布到 maven 制品库') {
-      steps {
-        echo '发布中...'
-        withCredentials([
-            usernamePassword(
-              credentialsId: "${CODING_ARTIFACTS_CREDENTIALS_ID}",
-              usernameVariable: 'CODING_MAVEN_REG_USERNAME',
-              passwordVariable: 'CODING_MAVEN_REG_PASSWORD'
-            )
-          ]) {
-            sh 'mvn deploy -s ./settings.xml -DskipTests'
-        }
-        echo '发布完成.'
-      }
+    //stage('发布到 maven 制品库') {
+      //steps {
+        //echo '发布中...'
+        //withCredentials([
+            //usernamePassword(
+              //credentialsId: "${CODING_ARTIFACTS_CREDENTIALS_ID}",
+              //usernameVariable: 'CODING_MAVEN_REG_USERNAME',
+              //passwordVariable: 'CODING_MAVEN_REG_PASSWORD'
+            //)
+          //]) {
+            //sh 'mvn deploy -s ./settings.xml -DskipTests'
+        //}
+        //echo '发布完成.'
+      //}
     }
   }
 }
