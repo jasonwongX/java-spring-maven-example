@@ -10,7 +10,7 @@ pipeline {
         checkout([$class: 'GitSCM',
         branches: [[name: 'main']],
         userRemoteConfigs: [[
-          url: GIT_REPO_URL,
+          url: 'git@gitlab.com:xcodespace/devops/java-spring-maven-example.git',
           credentialsId: CREDENTIALS_ID
         ]]])
       }
