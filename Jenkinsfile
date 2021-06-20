@@ -8,7 +8,7 @@ pipeline {
     stage('检出代码') {
       steps {
         checkout([$class: 'GitSCM',
-        branches: [[name: GIT_BUILD_REF]],
+        branches: [[name: 'main']],
         userRemoteConfigs: [[
           url: GIT_REPO_URL,
           credentialsId: CREDENTIALS_ID
