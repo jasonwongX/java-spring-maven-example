@@ -12,6 +12,7 @@ pipeline {
         userRemoteConfigs: [[
           url: 'git@gitlab.com:xcodespace/devops/java-spring-maven-example.git',
           //credentialsId: CREDENTIALS_ID
+          credentialsId: '80d19f60-2671-41d9-b3a8-538451dab78b'
         ]]])
       }
     }
